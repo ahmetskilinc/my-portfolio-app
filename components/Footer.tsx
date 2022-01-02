@@ -3,6 +3,7 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styled from "styled-components";
 import { animation } from "../utils/settings";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -193,6 +194,9 @@ const Footer = () => {
 					</svg>
 				</FooterIconLink>
 			</IconsWrapper>
+			<Link href="/blog" passHref>
+				<a>/blog</a>
+			</Link>
 			<p>developed by Ahmet.</p>
 		</StyledWrapper>
 	);
