@@ -1,11 +1,13 @@
 import type { NextPage } from "next";
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import ContactMe from "../components/ContactMe";
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
-import Life from "../components/Life";
-import MyWork from "../components/MyWork";
-import ScrollDownIndicator from "../components/ScrollDownIndicator";
+import MainLayout from "../layouts/MainLayout";
+
+const ContactMe = dynamic(() => import("../components/ContactMe"));
+const Hero = dynamic(() => import("../components/Hero"));
+const MyWork = dynamic(() => import("../components/MyWork"));
+const ScrollDownIndicator = dynamic(() => import("../components/ScrollDownIndicator"));
+const Life = dynamic(() => import("../components/Life"));
 
 const Home: NextPage = () => {
 	return (
@@ -23,8 +25,6 @@ const Home: NextPage = () => {
 				<meta name="description" content="My personal portfolio and website to showcase some of my projects." />
 
 				<link rel="icon" href="/favicon.ico" />
-
-				<meta name="description" content="My personal portfolio and website to showcase some of my projects." />
 
 				<link rel="apple-touch-icon" sizes="180x180" href="./src/static/images/apple-touch-icon.png" />
 				<link rel="icon" type="image/png" sizes="32x32" href="./src/static/images/favicon-32x32.png" />
@@ -44,15 +44,13 @@ const Home: NextPage = () => {
 				<meta property="twitter:image" content="/images/hero.jpg" />
 			</Head>
 
-			<main>
+			<MainLayout>
 				<ScrollDownIndicator />
 				<Hero />
 				<MyWork />
 				<Life />
 				<ContactMe />
-			</main>
-
-			<Footer />
+			</MainLayout>
 		</div>
 	);
 };

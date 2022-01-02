@@ -36,7 +36,7 @@ const ContactMe = () => {
 					ctaContainer = e;
 				}}
 			>
-				<Button href="./ahmet_kilinc_resume.pdf" download="">
+				<Button href="/ahmet_kilinc_resume.pdf">
 					<div>
 						My Resume
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">

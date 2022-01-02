@@ -2,17 +2,15 @@ import { useRef, useEffect } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
 import { animation } from "../utils/settings";
+import Image from "next/image";
 
-const HeroImageWrapper = styled.img`
+const HeroImageWrapper = styled.div`
 	opacity: 1;
 	height: 540px;
 	width: 420px;
 	position: absolute;
 	top: calc(50% - 270px);
 	left: calc(50% - 210px);
-	display: block;
-	object-fit: cover;
-	border-radius: 6px;
 
 	@media only screen and (max-width: 800px) {
 		position: unset;
@@ -20,6 +18,15 @@ const HeroImageWrapper = styled.img`
 		left: unset;
 		height: 100%;
 		width: 100%;
+	}
+	& > span > img {
+		display: block;
+		object-fit: cover;
+		border-radius: 6px;
+
+		@media only screen and (max-width: 800px) {
+			border-radius: 0;
+		}
 	}
 `;
 
@@ -37,16 +44,14 @@ const HeroImage = () => {
 	});
 
 	return (
-		<picture>
+		<HeroImageWrapper
+			ref={(e: any) => {
+				heroImage = e;
+			}}
+		>
 			<source srcSet="/images/hero.webp" type="image/webp" />
-			<HeroImageWrapper
-				ref={(e) => {
-					heroImage = e;
-				}}
-				src="/images/hero.jpg"
-				alt="Me!"
-			/>
-		</picture>
+			<Image src="/images/hero.jpg" alt="Me!" layout="fill" />
+		</HeroImageWrapper>
 	);
 };
 

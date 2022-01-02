@@ -1,5 +1,7 @@
+import PhotographyLayout from "../../layouts/PhotographyLayout";
+
 const Photography = () => {
-	return <div>Photography</div>;
+	return <PhotographyLayout>Photography</PhotographyLayout>;
 };
 
 export default Photography;

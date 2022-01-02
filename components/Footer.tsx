@@ -51,6 +51,10 @@ const IconsWrapper = styled.div`
 			}
 		}
 	}
+
+	@media only screen and (max-width: 800px) {
+		width: 280px;
+	}
 `;
 
 const FooterIconLinkContainer = styled.a`

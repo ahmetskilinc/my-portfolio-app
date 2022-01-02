@@ -5,6 +5,7 @@ import HeroImage from "./HeroImage";
 import { animation } from "../utils/settings";
 
 const HeroWrapper = styled.div`
+	background: linear-gradient(225deg, rgb(51, 43, 65), rgb(78, 75, 81));
 	overflow: hidden;
 	min-height: 500px;
 	height: 100vh;
@@ -19,14 +20,13 @@ const HeroWrapper = styled.div`
 `;
 
 const HeroLeft = styled.div`
-	background: linear-gradient(225deg, rgb(51, 43, 65), rgb(78, 75, 81));
 	width: 50%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	z-index: -1;
+	margin-left: 13%;
 
 	&:after {
 		width: 100%;
@@ -42,22 +42,23 @@ const HeroLeft = styled.div`
 	@media only screen and (max-width: 800px) {
 		height: 50%;
 		width: 100%;
-		background: linear-gradient(45deg, rgb(51, 43, 65), rgb(78, 75, 81));
+		margin: 0;
 	}
 `;
 
 const HeroRight = styled.div`
-	background: linear-gradient(135deg, #332b41, #4e4b51);
 	width: 50%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	margin-right: 13%;
 
 	@media only screen and (max-width: 800px) {
 		width: 100%;
 		height: 50%;
+		margin: 0;
 	}
 `;
 
@@ -73,6 +74,7 @@ const HeroHeading = styled.h1`
 		font-size: 1.6rem;
 	}
 `;
+
 const HeroSubheading = styled.h2`
 	margin: 14px;
 	font-weight: 300;
@@ -109,7 +111,6 @@ const Hero = () => {
 		<HeroWrapper>
 			<HeroLeft>
 				<HeroImage />
-				{/* <div className="overlay"></div> */}
 			</HeroLeft>
 			<HeroRight>
 				<HeroHeading
@@ -128,15 +129,17 @@ const Hero = () => {
 					I&apos;m Ahmet, a{" "}
 					<span
 						style={{
-							color: "rgb(201, 121, 248)",
+							fontFamily: "Roboto Slab, serif",
+							color: "rgb(214 143 255)",
 						}}
 					>
-						Full Stack
+						Full-Stack
 					</span>{" "}
 					Web Developer from{" "}
 					<span
 						style={{
-							color: "rgb(201, 121, 248)",
+							fontFamily: "Roboto Slab, serif",
+							color: "rgb(214 143 255)",
 						}}
 					>
 						London

@@ -1,11 +1,9 @@
-import BlogAppBar from "../components/BlogAppBar";
-import Footer from "../components/Footer";
-import SectionWrapper from "../components/SectionWrapper";
+import { BlogPostsAppBar, Footer, SectionWrapper } from "../components";
 
 const BlogLayout = (props: { children: React.ReactNode }) => {
 	return (
 		<>
-			<BlogAppBar />
+			<BlogPostsAppBar />
 			<SectionWrapper>{props.children}</SectionWrapper>
 			<Footer />
 		</>
