@@ -1,12 +1,7 @@
-import styled from "styled-components";
+import styles from "../styles/SectionWrapper.module.scss";
 
-const SectionWrapper = styled.section`
-	max-width: 1020px;
-	margin: 32px auto;
-
-	@media only screen and (max-width: 1020px) {
-		padding: 0 24px;
-	}
-`;
+const SectionWrapper = (props: { children: React.ReactNode }) => {
+	return <section className={styles.sectionWrapper}>{props.children}</section>;
+};
 
 export default SectionWrapper;

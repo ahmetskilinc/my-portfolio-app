@@ -7,7 +7,7 @@ import Data from "../data/work.json";
 const MyWork = () => (
 	<SectionWrapper>
 		<Subheading>some of my work</Subheading>
-		<div className="projects">
+		<div>
 			{Data.map(({ image, title, reverse, desc, demoUrl, sourceUrl, complete }) => (
 				<Project src={image} key={image} alt={title} reverse={reverse}>
 					<p>{title}</p>

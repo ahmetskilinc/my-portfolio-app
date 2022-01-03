@@ -1,128 +1,11 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import styled from "styled-components";
 import { animation } from "../utils/settings";
 import Link from "next/link";
+import styles from "../styles/Footer.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const StyledWrapper = styled.div`
-	padding: 6rem 0 3rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	> p {
-		color: #6b6b6b;
-	}
-`;
-
-const IconsWrapper = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	margin-bottom: 2rem;
-	width: 380px;
-	min-width: 26px;
-
-	> a {
-		display: inline-flex;
-		font-size: 3rem;
-		text-decoration: none;
-		color: var(--color-icon);
-		width: 4rem;
-		height: 4rem;
-		transition: 0.5s linear;
-		position: relative;
-		z-index: 1;
-
-		> svg {
-			height: 26px;
-			margin: auto;
-			transition: 0.5s linear;
-		}
-	}
-
-	> a:hover {
-		> svg {
-			> path {
-				fill: #ffffff;
-			}
-		}
-	}
-
-	@media only screen and (max-width: 800px) {
-		width: 280px;
-	}
-`;
-
-const FooterIconLinkContainer = styled.a`
-	display: inline-flex;
-	font-size: 3rem;
-	text-decoration: none;
-	color: var(--color-icon);
-	width: 4rem;
-	height: 4rem;
-	transition: 0.5s linear;
-	position: relative;
-	z-index: 1;
-
-	> svg {
-		height: 26px;
-		margin: auto;
-		transition: 0.5s linear;
-	}
-
-	&:hover {
-		> svg {
-			> path {
-				fill: #ffffff;
-			}
-		}
-	}
-
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		width: 4rem;
-		height: 4rem;
-		background: #000;
-		border-radius: 50%;
-		z-index: -1;
-		transform: scale(0);
-		transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
-	}
-
-	&:hover::before {
-		transform: scale(1);
-	}
-
-	&:nth-child(1):hover:before {
-		/* github */
-		background-color: #000000;
-	}
-
-	&:nth-child(2):hover:before {
-		/* instagram */
-		background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-	}
-
-	&:nth-child(3):hover:before {
-		/* linkedin */
-		background-color: #0077b5;
-	}
-
-	&:nth-child(4):hover:before {
-		/* codepen */
-		background-color: #000000;
-	}
-`;
 
 const FooterIconLink = (props: { link: string; label: string; children: React.ReactNode }) => {
 	const { link, label, children } = props;
@@ -140,7 +23,8 @@ const FooterIconLink = (props: { link: string; label: string; children: React.Re
 	});
 
 	return (
-		<FooterIconLinkContainer
+		<a
+			className={styles.iconLinkContainer}
 			ref={(e) => {
 				icon = e;
 			}}
@@ -150,14 +34,14 @@ const FooterIconLink = (props: { link: string; label: string; children: React.Re
 			aria-label={label}
 		>
 			{children}
-		</FooterIconLinkContainer>
+		</a>
 	);
 };
 
 const Footer = () => {
 	return (
-		<StyledWrapper>
-			<IconsWrapper>
+		<div className={styles.wrapper}>
+			<div className={styles.iconsWrapper}>
 				<FooterIconLink link="https://github.com/ahmetskilinc" label="Github">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23.4">
 						<path
@@ -193,12 +77,12 @@ const Footer = () => {
 						/>
 					</svg>
 				</FooterIconLink>
-			</IconsWrapper>
+			</div>
 			<Link href="/blog" passHref>
 				<a>/blog</a>
 			</Link>
 			<p>developed by Ahmet.</p>
-		</StyledWrapper>
+		</div>
 	);
 };
 

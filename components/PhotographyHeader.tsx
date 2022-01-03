@@ -1,14 +1,9 @@
-import styled from "styled-components";
-
-const PhotographerHeaderWrapper = styled.div`
-	text-align: center;
-	padding: 56px;
-`;
+import styles from "../styles/PhotographyHeader.module.scss";
 
 const PhotographyHeader = () => (
-	<PhotographerHeaderWrapper>
+	<div className={styles.photographyHeaderWrapper}>
 		<h1>My Amateur Photography</h1>
-	</PhotographerHeaderWrapper>
+	</div>
 );
 
 export default PhotographyHeader;

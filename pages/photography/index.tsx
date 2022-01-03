@@ -1,7 +1,12 @@
+import { PhotographyGrid } from "../../components";
 import PhotographyLayout from "../../layouts/PhotographyLayout";
 
 const Photography = () => {
-	return <PhotographyLayout>Photography</PhotographyLayout>;
+	return (
+		<PhotographyLayout>
+			<PhotographyGrid />
+		</PhotographyLayout>
+	);
 };
 
 export default Photography;

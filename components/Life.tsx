@@ -1,32 +1,13 @@
 import { useRef, useEffect } from "react";
 import Subheading from "./Subheading";
 import SectionWrapper from "./SectionWrapper";
-import styled from "styled-components";
+import styles from "../styles/Life.module.scss";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { animation } from "../utils/settings";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const LifeWrapper = styled.div`
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-
-	@media only screen and (max-width: 720px) {
-		grid-template-columns: 1fr;
-	}
-`;
-
-const LifeInnerWrapper = styled.div`
-	display: block;
-
-	> h3 {
-		font-size: 18px;
-	}
-	> p {
-		font-size: 16px;
-	}
-`;
 const Life = () => {
 	let xlnWork = useRef(null) as any;
 	let absoweblyWork = useRef(null) as any;
@@ -73,8 +54,8 @@ const Life = () => {
 	return (
 		<SectionWrapper>
 			<Subheading>experience</Subheading>
-			<LifeWrapper>
-				<LifeInnerWrapper>
+			<div className={styles.lifeWrapper}>
+				<div className={styles.lifeInnerWrapper}>
 					<h2
 						ref={(e) => {
 							workHeader = e;
@@ -102,7 +83,7 @@ const Life = () => {
 							<p>Junior Web Developer</p>
 						</div>
 					</div>
-				</LifeInnerWrapper>
+				</div>
 				<div className="education">
 					<h2
 						ref={(e) => {
@@ -123,7 +104,7 @@ const Life = () => {
 						</div>
 					</div>
 				</div>
-			</LifeWrapper>
+			</div>
 		</SectionWrapper>
 	);
 };

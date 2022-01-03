@@ -2,14 +2,9 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { animation } from "../utils/settings";
-import styled from "styled-components";
+import styles from "../styles/Subheading.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const CustomSubheading = styled.h3`
-	text-align: center;
-	margin-bottom: 40px;
-`;
 
 const Subheading = (props: { children: React.ReactNode }) => {
 	const { children } = props;
@@ -27,13 +22,14 @@ const Subheading = (props: { children: React.ReactNode }) => {
 	});
 
 	return (
-		<CustomSubheading
+		<h3
+			className={styles.subheading}
 			ref={(e) => {
 				subheading = e;
 			}}
 		>
 			{children}
-		</CustomSubheading>
+		</h3>
 	);
 };
 

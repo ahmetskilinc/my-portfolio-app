@@ -1,0 +1,25 @@
+.imageWrapper {
+	opacity: 1;
+	height: 540px;
+	width: 420px;
+	position: absolute;
+	top: calc(50% - 270px);
+	left: calc(50% - 210px);
+
+	@media only screen and (max-width: 800px) {
+		position: unset;
+		top: unset;
+		left: unset;
+		height: 100%;
+		width: 100%;
+	}
+	& > span > img {
+		display: block;
+		object-fit: cover;
+		border-radius: 6px;
+
+		@media only screen and (max-width: 800px) {
+			border-radius: 0;
+		}
+	}
+}
