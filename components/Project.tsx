@@ -39,7 +39,7 @@ const Project = (props: { data: dataType }) => {
 					projectImage = e;
 				}}
 			>
-				<Image src={`/images/projects/${image}.png`} alt={image} layout="fill" />
+				<Image src={require(`../public/images/projects/${image}.png`)} alt={image} layout="fill" placeholder="blur" />
 			</div>
 			<div
 				className={styles.info}
