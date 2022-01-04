@@ -24,7 +24,7 @@ const HeroImage = () => {
 				heroImage = e;
 			}}
 		>
-			<Image src="/images/hero.jpg" alt="Me!" layout="fill" />
+			<Image src={require("../public/images/hero.jpeg")} alt="Me!" layout="fill" quality={95} />
 		</div>
 	);
 };
