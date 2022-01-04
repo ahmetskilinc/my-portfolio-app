@@ -7,6 +7,7 @@ import Button from "./Button";
 import Subheading from "./Subheading";
 import { DownloadIcon, EmailIcon } from "./icons";
 import { SectionWrapper } from ".";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,6 +26,14 @@ const ContactMe = () => {
 	return (
 		<SectionWrapper>
 			<Subheading>contact me</Subheading>
+			<div className={styles.otherLinks}>
+				<Link href="/blog" passHref>
+					<a>/blog</a>
+				</Link>
+				<Link href="/photography" passHref>
+					<a>/photography</a>
+				</Link>
+			</div>
 			<div
 				className={styles.ctaContainer}
 				ref={(e) => {

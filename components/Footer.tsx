@@ -2,7 +2,6 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { animation } from "../utils/settings";
-import Link from "next/link";
 import styles from "../styles/Footer.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -78,9 +77,6 @@ const Footer = () => {
 					</svg>
 				</FooterIconLink>
 			</div>
-			<Link href="/blog" passHref>
-				<a>/blog</a>
-			</Link>
 			<p>developed by Ahmet.</p>
 		</div>
 	);
