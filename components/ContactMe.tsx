@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ContactMe = () => {
 	let ctaContainer = useRef(null) as any;
+	let otherLinks = useRef(null) as any;
 
 	useEffect(() => {
 		gsap.from(ctaContainer, {
@@ -21,12 +22,24 @@ const ContactMe = () => {
 				trigger: ctaContainer,
 			},
 		});
+
+		gsap.from(otherLinks, {
+			...animation,
+			scrollTrigger: {
+				trigger: otherLinks,
+			},
+		});
 	});
 
 	return (
 		<SectionWrapper>
 			<Subheading>contact me</Subheading>
-			<div className={styles.otherLinks}>
+			<div
+				ref={(e) => {
+					otherLinks = e;
+				}}
+				className={styles.otherLinks}
+			>
 				<Link href="/blog" passHref>
 					<a>/blog</a>
 				</Link>

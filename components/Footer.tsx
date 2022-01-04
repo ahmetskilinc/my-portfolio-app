@@ -38,6 +38,18 @@ const FooterIconLink = (props: { link: string; label: string; children: React.Re
 };
 
 const Footer = () => {
+	let copyrightText = useRef(null) as any;
+
+	useEffect(() => {
+		if (window.location.pathname === "/") {
+			gsap.from(copyrightText, {
+				...animation,
+				scrollTrigger: {
+					trigger: copyrightText,
+				},
+			});
+		}
+	});
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.iconsWrapper}>
@@ -77,7 +89,13 @@ const Footer = () => {
 					</svg>
 				</FooterIconLink>
 			</div>
-			<p>developed by Ahmet.</p>
+			<p
+				ref={(e) => {
+					copyrightText = e;
+				}}
+			>
+				developed by Ahmet.
+			</p>
 		</div>
 	);
 };
