@@ -39,7 +39,7 @@ const Project = (props: { data: dataType }) => {
 					projectImage = e;
 				}}
 			>
-				<Image src={`/images/projects/${image}.png`} layout="fill" />
+				<Image src={`/images/projects/${image}.png`} alt={image} layout="fill" />
 			</div>
 			<div
 				className={styles.info}
