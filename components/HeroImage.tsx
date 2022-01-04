@@ -2,7 +2,6 @@ import { useRef, useEffect } from "react";
 import styles from "../styles/HeroImage.module.scss";
 import gsap from "gsap";
 import { animation } from "../utils/settings";
-import Image from "next/image";
 
 const HeroImage = () => {
 	let heroImage = useRef(null) as any;
@@ -18,15 +17,15 @@ const HeroImage = () => {
 	});
 
 	return (
-		<div
+		<picture
 			className={styles.imageWrapper}
 			ref={(e: any) => {
 				heroImage = e;
 			}}
 		>
 			<source srcSet="/images/hero.webp" type="image/webp" />
-			<Image src="/images/hero.jpg" alt="Me!" layout="fill" />
-		</div>
+			<img src="/images/hero.jpg" alt="Me!" />
+		</picture>
 	);
 };
 

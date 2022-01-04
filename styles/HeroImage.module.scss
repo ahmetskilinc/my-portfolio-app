@@ -13,10 +13,12 @@
 		height: 100%;
 		width: 100%;
 	}
-	& > span > img {
+	& > img {
 		display: block;
 		object-fit: cover;
 		border-radius: 6px;
+		height: 100%;
+		width: 100%;
 
 		@media only screen and (max-width: 800px) {
 			border-radius: 0;
