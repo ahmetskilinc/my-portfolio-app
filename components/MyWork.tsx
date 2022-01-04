@@ -11,7 +11,7 @@ const MyWork = () => {
 			<Subheading>some of my work</Subheading>
 			<div>
 				{Data.map((data) => (
-					<Project data={data as dataType} />
+					<Project key={data.image} data={data as dataType} />
 				))}
 			</div>
 		</SectionWrapper>
