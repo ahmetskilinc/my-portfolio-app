@@ -11,9 +11,9 @@ import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const PostLayout = dynamic(() => import("../../layouts/PostLayout"));
 
-const BlogPost = (props: { frontMatter: any; slug: string; contentMd: string }) => {
-	const { frontMatter, slug, contentMd } = props;
-	const readTime = readingTime(contentMd);
+const BlogPost = (props: { frontMatter: any; slug: string; content: string }) => {
+	const { frontMatter, slug, content } = props;
+	const readTime = readingTime(content);
 
 	return (
 		<>
@@ -69,7 +69,7 @@ const BlogPost = (props: { frontMatter: any; slug: string; contentMd: string }) 
 						},
 					}}
 				>
-					{contentMd}
+					{content}
 				</ReactMarkdown>
 			</PostLayout>
 		</>
