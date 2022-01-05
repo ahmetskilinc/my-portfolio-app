@@ -1,17 +1,16 @@
-import posts from "../../data/posts.json";
 import Link from "next/link";
 import Head from "next/head";
 import dynamic from "next/dynamic";
+import type { Post } from "../../types/post";
+
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
 const BlogLayout = dynamic(() => import("../../layouts/BlogLayout"));
 
-interface Post {
-	id: string;
-	title: string;
-	content: string;
-}
-
-const Blog = () => {
+const Blog = (props: { posts: [Post] }) => {
+	const { posts } = props;
 	return (
 		<>
 			<Head>
@@ -46,16 +45,46 @@ const Blog = () => {
 				<meta property="twitter:image" content="/images/hero.jpg" />
 			</Head>
 			<BlogLayout>
-				{posts.map((post: Post) => (
-					<Link key={post.id} href={`/blog/${post.id}`}>
+				{posts.map((post: Post, index) => (
+					<Link href={"/blog/" + post.slug} passHref key={index}>
 						<a>
-							<h2>{post.title}</h2>
+							<div className="card mb-3 pointer" style={{ maxWidth: "540px" }}>
+								<div className="row g-0">
+									<div className="col-md-8">
+										<div className="card-body">
+											<h5 className="card-title">{post.frontMatter.title}</h5>
+											<p className="card-text">{post.frontMatter.description}</p>
+											<p className="card-text">
+												<small className="text-muted">{post.frontMatter.date}</small>
+											</p>
+											<p>{post.frontMatter.tags.map((tag, index) => tag + (post.frontMatter.tags.length !== index + 1 ? ", " : ""))}</p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</a>
 					</Link>
 				))}
 			</BlogLayout>
 		</>
 	);
+};
+
+export const getStaticProps = async () => {
+	const files = fs.readdirSync(path.join("./posts"));
+	const posts = files.map((filename) => {
+		const markdownWithMeta = fs.readFileSync(path.join("posts", filename), "utf-8");
+		const { data: frontMatter } = matter(markdownWithMeta);
+		return {
+			frontMatter,
+			slug: filename.split(".")[0],
+		};
+	});
+	return {
+		props: {
+			posts,
+		},
+	};
 };
 
 export default Blog;
