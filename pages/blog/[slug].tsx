@@ -60,7 +60,9 @@ const BlogPost = (props: { frontMatter: any; slug: string; content: string }) =>
 						code({ node, inline, className, children, ...props }) {
 							const match = /language-(\w+)/.exec(className || "");
 							return !inline && match ? (
-								<SyntaxHighlighter children={String(children).replace(/\n$/, "")} style={okaidia} language={match[1]} PreTag="div" {...props} />
+								<SyntaxHighlighter style={okaidia} language={match[1]} PreTag="div" {...props}>
+									{String(children).replace(/\n$/, "")}
+								</SyntaxHighlighter>
 							) : (
 								<code className={className} {...props}>
 									{children}
