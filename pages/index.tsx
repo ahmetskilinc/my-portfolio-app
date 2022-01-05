@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import MainLayout from "../layouts/MainLayout";
 
+const MainLayout = dynamic(() => import("../layouts/MainLayout"));
 const ContactMe = dynamic(() => import("../components/ContactMe"));
 const Hero = dynamic(() => import("../components/Hero"));
 const MyWork = dynamic(() => import("../components/MyWork"));

@@ -1,5 +1,7 @@
-import SectionWrapper from "./SectionWrapper";
-import Subheading from "./Subheading";
+import dynamic from "next/dynamic";
+
+const SectionWrapper = dynamic(() => import("./SectionWrapper"));
+const Subheading = dynamic(() => import("./Subheading"));
 
 const PhotographyAppBar = () => {
 	return (

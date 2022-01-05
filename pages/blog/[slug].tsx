@@ -1,11 +1,18 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
+import readingTime from "reading-time";
 import posts from "../../data/posts.json";
-import PostLayout from "../../layouts/PostLayout";
+import { getDateMonth, getDateDay } from "../../utils/dateUtils";
+
+const PostLayout = dynamic(() => import("../../layouts/PostLayout"));
 
 interface Post {
 	id: string;
 	title: string;
+	subtitle: string;
+	date: string;
+	author: string;
 	content: string;
 }
 
@@ -28,6 +35,9 @@ export const getStaticProps = async (props: { params: any }) => {
 
 const BlogPost = (props: { post: Post }) => {
 	const { post } = props;
+	const postDate = `${getDateDay(post.date)}/${getDateMonth(post.date)}/${new Date(post.date).getFullYear()}`;
+	const readTime = readingTime(post.content);
+
 	return (
 		<>
 			<Head>
@@ -62,6 +72,11 @@ const BlogPost = (props: { post: Post }) => {
 				<meta property="twitter:image" content="/images/hero.jpg" />
 			</Head>
 			<PostLayout>
+				<h2>{post.title}</h2>
+				<h4>{post.subtitle}</h4>
+				<h5>
+					{post.author} - {postDate} - {readTime.text}
+				</h5>
 				<ReactMarkdown>{post.content}</ReactMarkdown>
 			</PostLayout>
 		</>

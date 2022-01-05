@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { LottiePlayer } from "lottie-web";
-import EmptyLayout from "../layouts/EmptyLayout";
+import dynamic from "next/dynamic";
+
+const EmptyLayout = dynamic(() => import("../layouts/EmptyLayout"));
 
 const FourOhFour = () => {
 	const ref = useRef<HTMLDivElement>(null);

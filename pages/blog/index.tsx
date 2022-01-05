@@ -1,7 +1,9 @@
 import posts from "../../data/posts.json";
 import Link from "next/link";
-import BlogLayout from "../../layouts/BlogLayout";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+
+const BlogLayout = dynamic(() => import("../../layouts/BlogLayout"));
 
 interface Post {
 	id: string;

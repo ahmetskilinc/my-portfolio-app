@@ -1,6 +1,8 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import { PhotographyGrid } from "../../components";
-import PhotographyLayout from "../../layouts/PhotographyLayout";
+
+const PhotographyGrid = dynamic(() => import("../../components/PhotographyGrid"));
+const PhotographyLayout = dynamic(() => import("../../layouts/PhotographyLayout"));
 
 const Photography = () => {
 	return (
