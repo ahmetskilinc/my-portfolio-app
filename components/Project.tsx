@@ -5,11 +5,13 @@ import { animation } from "../utils/settings";
 import styles from "../styles/Project.module.scss";
 import Image from "next/image";
 import type { dataType } from "../types/data";
+import { isOdd } from "../utils/global";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Project = (props: { data: dataType }) => {
-	const { image, reverse, title, desc, complete, demoUrl, sourceUrl } = props.data;
+const Project = (props: { data: dataType; index: number }) => {
+	const { image, title, desc, complete, demoUrl, sourceUrl } = props.data;
+	const { index } = props;
 	let projectImage = useRef(null) as any;
 	let projectInfo = useRef(null) as any;
 
@@ -32,7 +34,7 @@ const Project = (props: { data: dataType }) => {
 	});
 
 	return (
-		<div key={image} className={`${styles.wrapper} ${reverse ? styles.projectReverse : ""}`}>
+		<div key={image} className={`${styles.wrapper} ${!isOdd(index) ? styles.projectReverse : ""}`}>
 			<div
 				className={styles.projectImage}
 				ref={(e) => {
