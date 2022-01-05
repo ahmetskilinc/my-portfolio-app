@@ -35,13 +35,13 @@ const Home: NextPage = () => {
 				<meta property="og:url" content="https://ahmetk.dev/" />
 				<meta property="og:title" content="Ahmet Kilinc Full Stack Web Developer" />
 				<meta property="og:description" content="My personal portfolio and website to showcase some of my projects." />
-				<meta property="og:image" content="/images/hero.jpg" />
+				<meta property="og:image" content="/images/hero.jpeg" />
 
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:url" content="https://ahmetk.dev/" />
 				<meta property="twitter:title" content="Ahmet Kilinc Full Stack Web Developer" />
 				<meta property="twitter:description" content="My personal portfolio and website to showcase some of my projects." />
-				<meta property="twitter:image" content="/images/hero.jpg" />
+				<meta property="twitter:image" content="/images/hero.jpeg" />
 			</Head>
 
 			<MainLayout>
