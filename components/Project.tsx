@@ -41,7 +41,7 @@ const Project = (props: { data: dataType; index: number }) => {
 					projectImage = e;
 				}}
 			>
-				<Image src={require(`../public/images/projects/${image}.png`)} alt={image} layout="fill" placeholder="blur" />
+				<Image src={require(`../public/images/projects/${image}.png`)} alt={image} layout="responsive" placeholder="blur" />
 			</div>
 			<div
 				className={styles.info}
