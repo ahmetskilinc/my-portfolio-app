@@ -7,7 +7,6 @@ export { default as Life } from "./Life";
 export { default as MyWork } from "./MyWork";
 export { default as PhotographyAppBar } from "./PhotographyAppBar";
 export { default as PhotographyGrid } from "./PhotographyGrid";
-export { default as PhotographyHeader } from "./PhotographyHeader";
 export { default as Project } from "./Project";
 export { default as ScrollDownIndicator } from "./ScrollDownIndicator";
 export { default as SectionWrapper } from "./SectionWrapper";
