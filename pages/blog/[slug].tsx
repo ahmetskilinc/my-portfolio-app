@@ -18,7 +18,7 @@ const BlogPost = (props: { frontMatter: any; slug: string; content: string }) =>
 	return (
 		<>
 			<Head>
-				<title>{frontMatter.title} | Blog | Ahmet K | Full Stack Web Developer</title>
+				<title>{frontMatter.title} | Blog | Ahmet Kilinc | Full Stack Web Developer</title>
 
 				{/* ADD KEYWORDS */}
 

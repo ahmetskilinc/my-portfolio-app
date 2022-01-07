@@ -30,7 +30,7 @@ const FourOhFour = () => {
 	return (
 		<EmptyLayout>
 			<Head>
-				<title>Error Mate | Ahmet K | Full Stack Web Developer</title>
+				<title>Error Mate | Ahmet Kilinc | Full Stack Web Developer</title>
 			</Head>
 			<div style={{ maxWidth: "500px", margin: "0 auto" }} ref={ref} />
 			<p style={{ textAlign: "center" }}>4oh4: some sort of error?</p>

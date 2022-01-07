@@ -5,7 +5,7 @@ const BlogLayout = (props: { children: React.ReactNode }) => {
 	return (
 		<>
 			<Head>
-				<title>Blog | Ahmet K | Full Stack Web Developer</title>
+				<title>Blog | Ahmet Kilinc | Full Stack Web Developer</title>
 
 				<meta property="og:url" content="https://ahmetk.dev/blog" />
 				<meta property="twitter:url" content="https://ahmetk.dev/blog" />
