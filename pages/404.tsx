@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { LottiePlayer } from "lottie-web";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const EmptyLayout = dynamic(() => import("../layouts/EmptyLayout"));
 
@@ -28,6 +29,9 @@ const FourOhFour = () => {
 
 	return (
 		<EmptyLayout>
+			<Head>
+				<title>Error Mate | Ahmet K | Full Stack Web Developer</title>
+			</Head>
 			<div style={{ maxWidth: "500px", margin: "0 auto" }} ref={ref} />
 			<p style={{ textAlign: "center" }}>4oh4: some sort of error?</p>
 		</EmptyLayout>

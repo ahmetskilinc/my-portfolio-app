@@ -43,9 +43,9 @@ const ContactMe = () => {
 				}}
 				className={styles.otherLinks}
 			>
-				<Link href="/blog" passHref>
+				{/* <Link href="/blog" passHref>
 					<a>/blog</a>
-				</Link>
+				</Link> */}
 				<Link href="/photography" passHref>
 					<a>/photography</a>
 				</Link>

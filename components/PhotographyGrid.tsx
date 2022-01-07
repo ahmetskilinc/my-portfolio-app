@@ -6,7 +6,7 @@ const PhotographyGrid = () => {
 	return (
 		<div className={styles.photographyWrapper}>
 			{Photography.map(({ img }) => (
-				<Image key={img} src={require(`../public/images/photographs/${img}.jpeg`)} alt={img} height="600" width="600" placeholder="blur" quality={99} />
+				<Image key={img} src={require(`../public/images/photographs/${img}.jpeg`)} alt={img} layout="responsive" placeholder="blur" quality={99} />
 			))}
 		</div>
 	);
