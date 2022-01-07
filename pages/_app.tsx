@@ -3,6 +3,9 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import * as gtag from "../lib/gtag";
 import "../styles/globals.scss";
+import Head from "next/head";
+
+import { GA_TRACKING_ID } from "../lib/gtag";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
@@ -16,7 +19,26 @@ function MyApp({ Component, pageProps }: AppProps) {
 		};
 	}, [router.events]);
 
-	return <Component {...pageProps} />;
+	return (
+		<>
+			<Head>
+				<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+								window.dataLayer = window.dataLayer || [];
+								function gtag(){dataLayer.push(arguments);}
+								gtag('js', new Date());
+								gtag('config', '${GA_TRACKING_ID}', {
+								page_path: window.location.pathname,
+								});
+							`,
+					}}
+				/>
+			</Head>
+			<Component {...pageProps} />;
+		</>
+	);
 }
 
 export default MyApp;
