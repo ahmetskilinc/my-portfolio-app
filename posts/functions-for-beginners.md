@@ -2,7 +2,7 @@
 title: Functions for Beginners
 date: "August 4, 2021"
 description: Learn how to create and use functions
-tags: ["functions", "javascript"]
+tags: ["functions", "javascript", "beginners", "syntax"]
 author: "Ahmet Kilinc"
 ---
 

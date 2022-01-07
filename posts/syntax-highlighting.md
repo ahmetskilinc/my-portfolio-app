@@ -2,7 +2,7 @@
 title: Syntax highlighting
 date: "August 5, 2021"
 description: Learn how to use syntax highlighting
-tags: ["syntax", "highlighting", "code"]
+tags: ["syntax", "highlighting", "code", "test"]
 author: "Ahmet Kilinc"
 ---
 

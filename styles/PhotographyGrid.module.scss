@@ -2,28 +2,26 @@
 	margin: 0 auto;
 	max-width: 1200px;
 	display: grid;
-	grid-gap: 6px;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+	grid-template-columns: 1fr 1fr 1fr;
 
 	@media only screen and (max-width: 1200px) {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-
-	@media only screen and (max-width: 960px) {
 		grid-template-columns: 1fr 1fr;
 	}
 
-	@media only screen and (max-width: 520px) {
+	@media only screen and (max-width: 960px) {
 		grid-template-columns: 1fr;
 	}
 
-	span img {
-		height: 320px;
+	span {
 		width: 100%;
-		object-fit: cover;
+		aspect-ratio: 1/1;
+		img {
+			object-fit: cover;
 
-		&:hover {
-			object-fit: contain;
+			&:hover {
+				object-fit: contain;
+			}
 		}
 	}
 }
