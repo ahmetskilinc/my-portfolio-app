@@ -60,6 +60,26 @@ const Life = () => {
 				<div className={styles.lifeInnerWrapper}>
 					<h2
 						ref={(e) => {
+							educationHeader = e;
+						}}
+					>
+						Education
+					</h2>
+					<div>
+						<div
+							ref={(e) => {
+								kingstonUni = e;
+							}}
+						>
+							<h3>Kingston University, London</h3>
+							<p>September 2017 - May 2020</p>
+							<p>Computer Science BSc</p>
+						</div>
+					</div>
+				</div>
+				<div className={styles.lifeInnerWrapper}>
+					<h2
+						ref={(e) => {
 							workHeader = e;
 						}}
 					>
@@ -83,26 +103,6 @@ const Life = () => {
 							<h3>Absowebly Ltd</h3>
 							<p>July 2018 - September 2018</p>
 							<p>Junior Web Developer</p>
-						</div>
-					</div>
-				</div>
-				<div className="education">
-					<h2
-						ref={(e) => {
-							educationHeader = e;
-						}}
-					>
-						Education
-					</h2>
-					<div>
-						<div
-							ref={(e) => {
-								kingstonUni = e;
-							}}
-						>
-							<h3>Kingston University, London</h3>
-							<p>September 2017 - May 2020</p>
-							<p>Computer Science BSc</p>
 						</div>
 					</div>
 				</div>

@@ -97,13 +97,14 @@
 * {
 	box-sizing: border-box;
 	font-family: "Titillium Web", sans-serif;
-	color: #6b6b6b;
+	color: #fefefe;
 }
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
 body {
+	background-color: #272727;
 	margin: 0;
 }
 main {
@@ -244,4 +245,9 @@ template {
 }
 [hidden] {
 	display: none;
+}
+
+.gsap-initial {
+	opacity: 1;
+	transform: translateY(0);
 }

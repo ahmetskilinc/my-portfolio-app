@@ -1,10 +1,8 @@
 const MyLogo = () => {
 	return (
-		<svg className="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.09 91.8">
-			<g>
-				<path fill="#fefefe" d="M98.09 91.8H75.75L30.76 0H53.1l44.99 91.8z" className="logo_line" />
-				<circle cx="13.8" cy="78" r="13.8" fill="#fefefe" className="logo_circle" />
-			</g>
+		<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.28 91.8">
+			<path d="M93.27,91.8H80A6.82,6.82,0,0,1,73.88,88L33.17,4.92A3.42,3.42,0,0,1,36.24,0H48.85A6.81,6.81,0,0,1,55,3.82L96,87.48A3,3,0,0,1,93.27,91.8Z" fill="#fefefe" />
+			<circle cx="13.8" cy="78" r="13.8" fill="#fefefe" />
 		</svg>
 	);
 };
