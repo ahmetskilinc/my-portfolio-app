@@ -1,4 +1,3 @@
-export { BlogPostAppBar, BlogPostsAppBar } from "./BlogAppBar";
 export { default as Button } from "./Button";
 export { default as ContactMe } from "./ContactMe";
 export { default as Footer } from "./Footer";
@@ -12,3 +11,4 @@ export { default as ScrollDownIndicator } from "./ScrollDownIndicator";
 export { default as SectionWrapper } from "./SectionWrapper";
 export { default as Slider } from "./Slider";
 export { default as Subheading } from "./Subheading";
+export { default as TechStackIconWrapper } from "./TechStackIconWrapper";

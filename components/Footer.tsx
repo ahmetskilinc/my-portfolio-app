@@ -107,6 +107,9 @@ const Footer = () => {
 				<Link href="/photography" passHref>
 					<a>/photography</a>
 				</Link>
+				<Link href="/tech-stack" passHref>
+					<a>/tech-stack</a>
+				</Link>
 			</div>
 			<p
 				ref={(e) => {
