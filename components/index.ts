@@ -12,3 +12,4 @@ export { default as SectionWrapper } from "./SectionWrapper";
 export { default as Slider } from "./Slider";
 export { default as Subheading } from "./Subheading";
 export { default as TechStackIconWrapper } from "./TechStackIconWrapper";
+export { default as FullScreenImage } from "./FullScreenImage";

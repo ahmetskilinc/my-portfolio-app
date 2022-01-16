@@ -12,16 +12,27 @@
 	@media only screen and (max-width: 960px) {
 		grid-template-columns: 1fr;
 	}
-
 	span {
 		width: 100%;
 		aspect-ratio: 1/1;
 		img {
 			object-fit: cover;
+			transition: all 0.1s ease-in-out;
 
 			&:hover {
-				object-fit: contain;
+				// object-fit: contain;
+				transform: scale(0.98);
 			}
 		}
 	}
+}
+
+.imageButton {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
