@@ -1,11 +1,15 @@
 import dynamic from "next/dynamic";
+import { SectionWrapper, Subheading } from "../components";
 
 const MainLayout = dynamic(() => import("../layouts/MainLayout"));
 
 const Tech = () => {
 	return (
 		<MainLayout>
-			<p>This is my stack</p>
+			<SectionWrapper>
+				<Subheading>Tech</Subheading>
+				<p>this is the tech</p>
+			</SectionWrapper>
 		</MainLayout>
 	);
 };
