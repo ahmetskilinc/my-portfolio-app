@@ -1,4 +1,3 @@
-export { BlogPostAppBar, BlogPostsAppBar } from "./BlogAppBar";
 export { default as Button } from "./Button";
 export { default as ContactMe } from "./ContactMe";
 export { default as Footer } from "./Footer";
