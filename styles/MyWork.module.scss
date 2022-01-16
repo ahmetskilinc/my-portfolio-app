@@ -1,0 +1,8 @@
+.projectsWrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	justify-content: space-between;
+	margin-top: 2rem;
+	overflow: scroll;
+}
