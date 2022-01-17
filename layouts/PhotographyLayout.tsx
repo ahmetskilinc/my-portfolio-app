@@ -7,6 +7,7 @@ const PhotographyLayout = (props: { children: React.ReactNode }) => {
 			<Head>
 				<title>Photography | Ahmet Kilinc | Full Stack Web Developer</title>
 
+				<meta name="description" content="A place to showcase my amateur photography" />
 				<meta property="og:url" content="https://ahmetk.dev/photography" />
 				<meta property="twitter:url" content="https://ahmetk.dev/photography" />
 			</Head>

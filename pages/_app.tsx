@@ -23,6 +23,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<>
 			<Head>
 				<title>Ahmet Kilinc | Full Stack Web Developer</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<meta name="description" content="A place to showcase my projects" />
 				<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
 				<script
 					dangerouslySetInnerHTML={{
