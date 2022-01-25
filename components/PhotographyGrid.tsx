@@ -18,7 +18,7 @@ const PhotographyGrid = () => {
 			<div className={styles.photographyWrapper}>
 				{Photography.map(({ img }) => (
 					<button key={img} className={styles.imageButton} onClick={() => handleOpen(img)}>
-						<Image src={require(`../public/images/photographs/${img}.jpeg`)} alt={img} layout="responsive" placeholder="blur" quality={50} />
+						<Image src={require(`../public/images/photographs/${img}.jpeg`)} alt={img} layout="responsive" placeholder="blur" quality={30} />
 					</button>
 				))}
 			</div>
