@@ -1,7 +1,9 @@
 import Head from "next/head";
 import { Footer, Slider } from "../components";
+import { useRouter } from "next/router";
 
 const MainLayout = (props: { children: React.ReactNode }) => {
+	const router = useRouter();
 	return (
 		<>
 			<Head>
@@ -10,11 +12,9 @@ const MainLayout = (props: { children: React.ReactNode }) => {
 
 				<meta name="keywords" content="HTML, CSS, JavaScript, Blog, Tech, Student, Web Developer, Full-Stack, Ahmet, Kilinc, Ahmet Kilinc, AhmetK" />
 			</Head>
-			<Slider />
-			<div>
-				{props.children}
-				<Footer />
-			</div>
+			{router.pathname === "/" ? <Slider /> : null}
+			{props.children}
+			<Footer />
 		</>
 	);
 };

@@ -1,4 +1,4 @@
-import { SectionWrapper, Subheading, TechStackIconWrapper } from "../components";
+import { SectionWrapper, TechStackIconWrapper, TopBar } from "../components";
 import { GSAPIcon, NextJsIcon, VercelIcon } from "../components/icons";
 import { MainLayout } from "../layouts";
 
@@ -6,7 +6,7 @@ const TechStack = () => {
 	return (
 		<MainLayout>
 			<SectionWrapper>
-				<Subheading>Tech</Subheading>
+				<TopBar title="My Tech Stack" />
 				{/* NEXTJS */}
 				<TechStackIconWrapper>
 					<NextJsIcon />

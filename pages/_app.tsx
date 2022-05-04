@@ -1,10 +1,10 @@
 import type { AppProps } from "next/app";
-import { useEffect } from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from "next/script";
+import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 import "../styles/globals.scss";
-import Head from "next/head";
-import Script from "next/script";
 
 import { GA_TRACKING_ID } from "../lib/gtag";
 

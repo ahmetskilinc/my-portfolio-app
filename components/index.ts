@@ -4,7 +4,7 @@ export { default as Footer } from "./Footer";
 export { default as Hero } from "./Hero";
 export { default as Life } from "./Life";
 export { default as MyWork } from "./MyWork";
-export { default as PhotographyAppBar } from "./PhotographyAppBar";
+export { default as TopBar } from "./TopBar";
 export { default as PhotographyGrid } from "./PhotographyGrid";
 export { default as Project } from "./Project";
 export { default as ScrollDownIndicator } from "./ScrollDownIndicator";

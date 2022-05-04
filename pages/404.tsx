@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
 import type { LottiePlayer } from "lottie-web";
-import Head from "next/head";
 import type { NextPage } from "next";
+import Head from "next/head";
+import { useEffect, useRef, useState } from "react";
 import { EmptyLayout } from "../layouts";
 
 const FourOhFour: NextPage = () => {
-	const ref = useRef<HTMLDivElement>(null);
+	let lottieContainer = useRef(null) as any;
 	const [lottie, setLottie] = useState<LottiePlayer | null>(null);
 
 	useEffect(() => {
@@ -13,9 +13,9 @@ const FourOhFour: NextPage = () => {
 	}, []);
 
 	useEffect(() => {
-		if (lottie && ref.current) {
+		if (lottie && lottieContainer.current) {
 			const animation = lottie.loadAnimation({
-				container: ref.current,
+				container: lottieContainer.current,
 				renderer: "svg",
 				loop: true,
 				autoplay: true,
@@ -31,7 +31,12 @@ const FourOhFour: NextPage = () => {
 			<Head>
 				<title>Error Mate | Ahmet Kilinc | Full Stack Web Developer</title>
 			</Head>
-			<div style={{ maxWidth: "500px", margin: "0 auto" }} ref={ref} />
+			<div
+				style={{ maxWidth: "500px", margin: "0 auto" }}
+				ref={(e) => {
+					lottieContainer = e;
+				}}
+			/>
 			<p style={{ textAlign: "center" }}>4oh4: some sort of error?</p>
 		</EmptyLayout>
 	);

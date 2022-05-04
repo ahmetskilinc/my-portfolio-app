@@ -1,8 +1,8 @@
 import Link from "next/link";
 import styles from "../styles/BlogAppBar.module.scss";
-import { Subheading } from "./";
+import { Subheading } from ".";
 
-const PhotographyHeader = () => (
+const TopBar = ({ title }: { title: string }) => (
 	<div className={styles.blogAppBarWrapper}>
 		<div className={styles.blogAppBarLeft}>
 			<Link href="/" passHref>
@@ -10,10 +10,10 @@ const PhotographyHeader = () => (
 			</Link>
 		</div>
 		<div className={styles.blogAppBarCenter}>
-			<Subheading>My Amatuer Photography</Subheading>
+			<Subheading>{title}</Subheading>
 		</div>
 		<div className={styles.blogAppBarRight}></div>
 	</div>
 );
 
-export default PhotographyHeader;
+export default TopBar;

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Footer, PhotographyAppBar, SectionWrapper } from "../components";
+import { Footer, SectionWrapper, TopBar } from "../components";
 
 const PhotographyLayout = (props: { children: React.ReactNode }) => {
 	return (
@@ -11,7 +11,7 @@ const PhotographyLayout = (props: { children: React.ReactNode }) => {
 				<meta property="og:url" content="https://ahmetk.dev/photography" />
 				<meta property="twitter:url" content="https://ahmetk.dev/photography" />
 			</Head>
-			<PhotographyAppBar />
+			<TopBar title="My Amateur Photography" />
 			<SectionWrapper>{props.children}</SectionWrapper>
 			<Footer />
 		</>

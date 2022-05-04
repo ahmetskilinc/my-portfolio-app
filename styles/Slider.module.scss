@@ -12,7 +12,7 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	animation: loader-slide-out 0.6s 0.4s cubic-bezier(1, 0, 0, 1) forwards;
+	animation: loader-slide-out 0.5s 0.3s cubic-bezier(1, 0, 0, 1) forwards;
 
 	> svg {
 		height: 120px;
