@@ -1,12 +1,9 @@
-import dynamic from "next/dynamic";
 import { useRef, useEffect } from "react";
 import styles from "../styles/Life.module.scss";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { animation } from "../utils/settings";
-
-const SectionWrapper = dynamic(() => import("./SectionWrapper"));
-const Subheading = dynamic(() => import("./Subheading"));
+import { animation } from "../lib/settings";
+import { SectionWrapper, Subheading } from "./";
 
 gsap.registerPlugin(ScrollTrigger);
 

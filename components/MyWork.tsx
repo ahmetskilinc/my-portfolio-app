@@ -1,11 +1,8 @@
-import dynamic from "next/dynamic";
 import { Project } from ".";
 import type { dataType } from "../types/data";
+import { SectionWrapper, Subheading } from "./";
 
 import Data from "../data/work.json";
-
-const SectionWrapper = dynamic(() => import("./SectionWrapper"));
-const Subheading = dynamic(() => import("./Subheading"));
 
 const MyWork = () => {
 	return (

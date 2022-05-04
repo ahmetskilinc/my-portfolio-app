@@ -1,8 +1,6 @@
-import dynamic from "next/dynamic";
 import { SectionWrapper, Subheading, TechStackIconWrapper } from "../components";
 import { GSAPIcon, NextJsIcon, VercelIcon } from "../components/icons";
-
-const MainLayout = dynamic(() => import("../layouts/MainLayout"));
+import { MainLayout } from "../layouts";
 
 const TechStack = () => {
 	return (

@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import * as gtag from "../lib/gtag";
 import "../styles/globals.scss";
 import Head from "next/head";
+import Script from "next/script";
 
 import { GA_TRACKING_ID } from "../lib/gtag";
 
@@ -25,20 +26,22 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<title>Ahmet Kilinc | Full Stack Web Developer</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta name="description" content="A place to showcase my projects" />
-				<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-								window.dataLayer = window.dataLayer || [];
-								function gtag(){dataLayer.push(arguments);}
-								gtag('js', new Date());
-								gtag('config', '${GA_TRACKING_ID}', {
-								page_path: window.location.pathname,
-								});
-							`,
-					}}
-				/>
 			</Head>
+			<Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+			<Script
+				id="gtag-init"
+				strategy="afterInteractive"
+				dangerouslySetInnerHTML={{
+					__html: `
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', '${GA_TRACKING_ID}', {
+						page_path: window.location.pathname,
+						});
+					`,
+				}}
+			/>
 			<Component {...pageProps} />
 		</>
 	);

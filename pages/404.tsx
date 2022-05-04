@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { LottiePlayer } from "lottie-web";
-import dynamic from "next/dynamic";
 import Head from "next/head";
 import type { NextPage } from "next";
-
-const EmptyLayout = dynamic(() => import("../layouts/EmptyLayout"));
+import { EmptyLayout } from "../layouts";
 
 const FourOhFour: NextPage = () => {
 	const ref = useRef<HTMLDivElement>(null);

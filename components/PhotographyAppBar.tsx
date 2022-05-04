@@ -1,8 +1,6 @@
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import styles from "../styles/BlogAppBar.module.scss";
-
-const Subheading = dynamic(() => import("./Subheading"));
+import { Subheading } from "./";
 
 const PhotographyHeader = () => (
 	<div className={styles.blogAppBarWrapper}>

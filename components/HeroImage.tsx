@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import styles from "../styles/HeroImage.module.scss";
 import gsap from "gsap";
-import { animation } from "../utils/settings";
+import { animation } from "../lib/settings";
 import Image from "next/image";
 
 const HeroImage = () => {

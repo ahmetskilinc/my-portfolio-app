@@ -1,10 +1,8 @@
-import dynamic from "next/dynamic";
 import { useRef, useEffect } from "react";
 import styles from "../styles/Hero.module.scss";
 import gsap from "gsap";
-import { animation } from "../utils/settings";
-
-const HeroImage = dynamic(() => import("./HeroImage"));
+import { animation } from "../lib/settings";
+import { HeroImage } from "./";
 
 const Hero = () => {
 	let heroTextHeader = useRef(null) as any;

@@ -1,15 +1,11 @@
-import dynamic from "next/dynamic";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "../styles/ContactMe.module.scss";
-import { animation } from "../utils/settings";
-
-const DownloadIcon = dynamic(() => import("./icons/DownloadIcon"));
-const EmailIcon = dynamic(() => import("./icons/EmailIcon"));
-const Button = dynamic(() => import("./Button"));
-const SectionWrapper = dynamic(() => import("./SectionWrapper"));
-const Subheading = dynamic(() => import("./Subheading"));
+import { animation } from "../lib/settings";
+import { SectionWrapper, Subheading } from "./";
+import Button from "./Button";
+import { DownloadIcon, EmailIcon } from "./icons";
 
 gsap.registerPlugin(ScrollTrigger);
 

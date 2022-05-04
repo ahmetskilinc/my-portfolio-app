@@ -1,11 +1,10 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { animation } from "../utils/settings";
+import { animation } from "../lib/settings";
 import styles from "../styles/Project.module.scss";
 import Image from "next/image";
 import type { dataType } from "../types/data";
-import { isOdd } from "../utils/global";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,7 +33,7 @@ const Project = (props: { data: dataType; index: number }) => {
 	});
 
 	return (
-		<div key={image} className={`${styles.wrapper} ${!isOdd(index) ? styles.projectReverse : ""}`}>
+		<div key={image} className={`${styles.wrapper} ${!(index % 2) ? styles.projectReverse : ""}`}>
 			<div
 				className={styles.projectImage}
 				ref={(e) => {

@@ -1,7 +1,5 @@
-import dynamic from "next/dynamic";
 import styles from "../styles/Slider.module.scss";
-
-const MyLogo = dynamic(() => import("./icons/MyLogo"));
+import { MyLogo } from "./icons";
 
 const Slider = () => {
 	return (

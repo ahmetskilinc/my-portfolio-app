@@ -1,12 +1,6 @@
 import type { NextPage } from "next";
-import dynamic from "next/dynamic";
-
-const MainLayout = dynamic(() => import("../layouts/MainLayout"));
-const ContactMe = dynamic(() => import("../components/ContactMe"));
-const Hero = dynamic(() => import("../components/Hero"));
-const MyWork = dynamic(() => import("../components/MyWork"));
-const ScrollDownIndicator = dynamic(() => import("../components/ScrollDownIndicator"));
-const Life = dynamic(() => import("../components/Life"));
+import { ContactMe, Hero, Life, MyWork, ScrollDownIndicator } from "../components";
+import { MainLayout } from "../layouts";
 
 const Home: NextPage = () => {
 	return (

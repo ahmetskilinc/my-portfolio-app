@@ -13,3 +13,4 @@ export { default as Slider } from "./Slider";
 export { default as Subheading } from "./Subheading";
 export { default as TechStackIconWrapper } from "./TechStackIconWrapper";
 export { default as FullScreenImage } from "./FullScreenImage";
+export { default as HeroImage } from "./HeroImage";
