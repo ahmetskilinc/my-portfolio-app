@@ -30,7 +30,7 @@ const Project = (props: { data: dataType; index: number }) => {
 				trigger: projectImage,
 			},
 		});
-	});
+	}, [projectInfo, projectImage]);
 
 	return (
 		<div key={image} className={`${styles.wrapper} ${!(index % 2) ? styles.projectReverse : ""}`}>

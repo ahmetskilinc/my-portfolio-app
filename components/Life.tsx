@@ -1,8 +1,8 @@
-import { useRef, useEffect } from "react";
-import styles from "../styles/Life.module.scss";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useEffect, useRef } from "react";
 import { animation } from "../lib/settings";
+import styles from "../styles/Life.module.scss";
 import { SectionWrapper, Subheading } from "./";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -49,7 +49,8 @@ const Life = () => {
 				trigger: educationHeader,
 			},
 		});
-	});
+	}, [xlnWork, absoweblyWork, kingstonUni, workHeader, educationHeader]);
+
 	return (
 		<SectionWrapper>
 			<Subheading>experience</Subheading>

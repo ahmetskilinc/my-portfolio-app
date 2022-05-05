@@ -1,8 +1,8 @@
-import { useRef, useEffect } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import styles from "../styles/ContactMe.module.scss";
+import { useEffect, useRef } from "react";
 import { animation } from "../lib/settings";
+import styles from "../styles/ContactMe.module.scss";
 import { SectionWrapper, Subheading } from "./";
 import Button from "./Button";
 import { DownloadIcon, EmailIcon } from "./icons";
@@ -19,7 +19,7 @@ const ContactMe = () => {
 				trigger: ctaContainer,
 			},
 		});
-	});
+	}, [ctaContainer]);
 
 	return (
 		<SectionWrapper>

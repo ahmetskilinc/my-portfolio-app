@@ -1,4 +1,4 @@
-export interface dataType {
+export type dataType = {
 	image: string;
 	reverse: boolean;
 	title: string;
@@ -6,4 +6,4 @@ export interface dataType {
 	complete: boolean;
 	demoUrl: string;
 	sourceUrl: string;
-}
+};

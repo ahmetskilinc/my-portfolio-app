@@ -19,7 +19,7 @@ const Subheading = (props: { children: React.ReactNode }) => {
 				},
 			});
 		}
-	});
+	}, [subheading]);
 
 	return (
 		<h3

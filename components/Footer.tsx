@@ -20,7 +20,7 @@ const FooterIconLink = (props: { link: string; label: string; children: React.Re
 				},
 			});
 		}
-	});
+	}, [icon]);
 
 	return (
 		<a
@@ -58,7 +58,8 @@ const Footer = () => {
 				},
 			});
 		}
-	});
+	}, [copyrightText, otherLinks]);
+
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.iconsWrapper}>

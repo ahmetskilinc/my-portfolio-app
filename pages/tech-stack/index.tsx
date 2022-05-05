@@ -1,6 +1,7 @@
-import { SectionWrapper, TechStackIconWrapper, TopBar } from "../components";
-import { GSAPIcon, NextJsIcon, VercelIcon } from "../components/icons";
-import { MainLayout } from "../layouts";
+import { lazy } from "react";
+import { SectionWrapper, TechStackIconWrapper, TopBar } from "../../components";
+import { GSAPIcon, NextJsIcon, VercelIcon } from "../../components/icons";
+import { MainLayout } from "../../layouts";
 
 const TechStack = () => {
 	return (

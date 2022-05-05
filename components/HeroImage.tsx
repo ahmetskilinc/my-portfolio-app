@@ -15,7 +15,7 @@ const HeroImage = () => {
 			y: 0,
 			delay: 0.7,
 		});
-	});
+	}, [heroImage]);
 
 	return (
 		<div

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../styles/TechStackIconWrapper.module.scss";
 
 const TechStackIconWrapper = (props: { children: React.ReactNode }) => {

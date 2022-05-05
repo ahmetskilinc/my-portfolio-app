@@ -18,7 +18,8 @@ const Hero = () => {
 			...animation,
 			delay: 1.2,
 		});
-	});
+	}, [heroTextCopy, heroTextHeader]);
+
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.left}>
